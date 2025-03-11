@@ -6,7 +6,7 @@ interface Pokemon {
   sprite: string;
 }
 
-export const fetchPokemon = () => {
+export const useFetchPokemon = () => {
   const [pokemonList, setPokemonList] = useState<Pokemon[]>([]);
   const [loading, setLoading] = useState<boolean>(true);
   const [error, setError] = useState<string | null>(null);
