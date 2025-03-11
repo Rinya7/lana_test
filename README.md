@@ -46,3 +46,7 @@ Imagine that you are a Pokémon trainer where you have to fill out a form with y
 - **Good luck!**: Lastly, remember that luck can also play a role, so maintain a positive attitude and have confidence in your abilities. Do your best and maintain self-assurance throughout the technical test.
 
 ### I wish you the best of luck in your technical test!🤞😄
+2️⃣ Заменяем статичные данные покемонов на PokeAPI (Axios).
+3️⃣ Реализуем модальное окно с выбранными покемонами.
+4️⃣ Добавляем логотип Luna Edge в Storybook (если нужно).
+5️⃣ Финальный тест, пуш в репозиторий и всё готово! 🎉

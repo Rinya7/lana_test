@@ -1,11 +1,8 @@
-/*@tailwind base;*/
-/*@tailwind components;*/
-/*@tailwind utilities;*/
 @import "tailwindcss";
 
 .container {
     max-width: 375px;
-    padding: 0 15px;
+    padding: 8px 15px;
     margin-left: auto;
     margin-right: auto;
   }
@@ -13,6 +10,8 @@
    
   .title{
     margin: 0;
+    font-size: larger;
+    color:blueviolet
   }
 
   .width-200{
@@ -23,7 +22,7 @@
     /* md: Планшети */
     .container {
       max-width: 768px;
-      padding: 0 8px;
+      padding: 10px 8px;
     }
   }
   
@@ -31,6 +30,6 @@
     /* xl: Великі десктопи */
     .container {
       max-width: 1280px;
-      padding: 0 55px;
+      padding: 16px 55px;
     }
   }

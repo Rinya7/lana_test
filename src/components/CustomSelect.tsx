@@ -63,7 +63,7 @@ const CustomSelect: React.FC<CustomSelectProps> = ({ options, onSelect, selected
   };
 
   return (
-    <div ref={selectRef} className={`relative w-[200px] border rounded-[16px] ${className} ${disabled ? "opacity-50 cursor-not-allowed" : ""}`}>
+    <div ref={selectRef} className={`mx-auto relative w-[200px] border rounded-[16px] ${className} ${disabled ? "opacity-50 cursor-not-allowed" : ""}`}>
      <div
   className="  p-[10px]  width-200   cursor-pointer   whitespace-nowrap overflow-hidden text-ellipsis"
   onClick={toggleDropdown}
