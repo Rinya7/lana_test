@@ -1,10 +1,11 @@
-import { useState } from 'react'
+
+import BattleForm from './pages/BattleForm'
 
 function App() {
   return (
-    <div>
-      <h1>Welcome to Luna Edge technical interview</h1>
-    </div>
+     <>
+     <BattleForm />
+    </>
   )
 }
 

@@ -1,0 +1,36 @@
+/*@tailwind base;*/
+/*@tailwind components;*/
+/*@tailwind utilities;*/
+@import "tailwindcss";
+
+.container {
+    max-width: 375px;
+    padding: 0 15px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+   
+  .title{
+    margin: 0;
+  }
+
+  .width-200{
+    width: 200px;
+  }
+  
+  @media (min-width: 768px) {
+    /* md: Планшети */
+    .container {
+      max-width: 768px;
+      padding: 0 8px;
+    }
+  }
+  
+  @media (min-width: 1280px) {
+    /* xl: Великі десктопи */
+    .container {
+      max-width: 1280px;
+      padding: 0 55px;
+    }
+  }
