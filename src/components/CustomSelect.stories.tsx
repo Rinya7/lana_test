@@ -26,25 +26,53 @@ const meta: Meta<typeof CustomSelect> = {
     },
   },
   tags: ["autodocs"],
+  argTypes: {
+    placeholder: {
+        name: "Placeholder",
+        description: "Text displayed when no Pokémon is selected.",
+        control: { type: "text" },
+        table: {
+          type: { summary: "string" },
+          defaultValue: { summary: "Select Pokémon" },
+        },
+    },
+    disabled: {
+        name: "Disabled",
+        description: "Disables the component if set to `true`.",
+        control: { type: "boolean" },
+        table: {
+          type: { summary: "boolean" },
+          defaultValue: { summary: "false" },
+        },
+    },
+    className: {
+        name: "Class Name",
+        description: "Additional CSS classes for styling the component.",
+        control: { type: "text" },
+        table: {
+          type: { summary: "string" },
+        },
+    },
+  },
 };
 
 export default meta;
 
 export const Default: StoryObj<typeof CustomSelect> = {
-  render: () => {
-    const [selectedPokemon, setSelectedPokemon] = useState<Pokemon[]>([]);
-
-    return (
-      <div className=" bg-gray-50  flex justify-center  ">
-        <CustomSelect
-          options={sampleOptions}
-          selectedPokemon={selectedPokemon}
-          onSelect={setSelectedPokemon}
-        />
-      </div>
-    );
-  },
-};
+    args: {
+        placeholder: "Select Pokémon",
+        disabled: false,
+      },
+      render: (args) => {
+        const [selectedPokemon, setSelectedPokemon] = useState<Pokemon[]>([]);
+    
+        return (
+          <div className="bg-gray-50 flex justify-center">
+            <CustomSelect {...args} options={sampleOptions} selectedPokemon={selectedPokemon} onSelect={setSelectedPokemon} />
+          </div>
+        );
+      },
+    };
 
 export const WithPreselectedPokemon: StoryObj<typeof CustomSelect> = {
   render: () => {
@@ -88,16 +116,20 @@ export const MaxLimitReached: StoryObj<typeof CustomSelect> = {
 
 
 export const Disabled: StoryObj<typeof CustomSelect> = {
-    render: () => {
+    args: {
+         
+        disabled: true,
+      },
+    render: (args) => {
       const [selectedPokemon, setSelectedPokemon] = useState<Pokemon[]>([]);
   
       return (
         <div className="bg-gray-50 flex justify-center">
-          <CustomSelect
+          <CustomSelect {...args}
             options={sampleOptions}
             selectedPokemon={selectedPokemon}
             onSelect={setSelectedPokemon}
-            disabled={true}
+             
           />
         </div>
       );
@@ -105,16 +137,20 @@ export const Disabled: StoryObj<typeof CustomSelect> = {
   };
   
   export const WithPlaceholder: StoryObj<typeof CustomSelect> = {
-    render: () => {
+    args: {
+        placeholder: "Choose your Pokémon...",
+        disabled: false,
+      },
+    render: (args) => {
       const [selectedPokemon, setSelectedPokemon] = useState<Pokemon[]>([]);
   
       return (
         <div className="bg-gray-50 flex justify-center">
-          <CustomSelect
+          <CustomSelect {...args}
             options={sampleOptions}
             selectedPokemon={selectedPokemon}
             onSelect={setSelectedPokemon}
-            placeholder="Choose your Pokémon..."
+             
           />
         </div>
       );
@@ -122,16 +158,20 @@ export const Disabled: StoryObj<typeof CustomSelect> = {
   };
   
   export const WithCustomStyles: StoryObj<typeof CustomSelect> = {
-    render: () => {
+    args: {
+        className: "border-4 border-blue-500 text-blue-500 p-2 rounded-lg",
+         
+      },
+    render: (args) => {
       const [selectedPokemon, setSelectedPokemon] = useState<Pokemon[]>([]);
   
       return (
         <div className="bg-gray-50 flex justify-center">
-          <CustomSelect
+          <CustomSelect {...args}
             options={sampleOptions}
             selectedPokemon={selectedPokemon}
             onSelect={setSelectedPokemon}
-            className="border-4 border-blue-500 text-blue-500 p-2 rounded-lg"
+             
           />
         </div>
       );

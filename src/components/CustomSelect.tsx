@@ -5,14 +5,26 @@ interface Pokemon {
   sprite: string;
 }
 
+ 
 interface CustomSelectProps {
-  options: Pokemon[];
-  onSelect: (selected: Pokemon[]) => void;
-  selectedPokemon: Pokemon[];
-  placeholder?: string; 
-  disabled?: boolean;
-  className?:string;
-}
+    
+    options: Pokemon[];
+  
+    
+    onSelect: (selected: Pokemon[]) => void;
+  
+     
+    selectedPokemon: Pokemon[];
+  
+      
+    placeholder?: string;
+   
+     
+    disabled?: boolean;
+  
+     
+    className?: string;
+  }
 
 const CustomSelect: React.FC<CustomSelectProps> = ({ options, onSelect, selectedPokemon, placeholder = "Select Pokémon",
     disabled = false, className}) => {
