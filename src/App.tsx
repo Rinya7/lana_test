@@ -3,7 +3,7 @@ import { useState } from 'react'
 function App() {
   return (
     <div>
-      <p>Welcome to Luna Edge technical interview</p>
+      <h1>Welcome to Luna Edge technical interview</h1>
     </div>
   )
 }
